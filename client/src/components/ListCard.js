@@ -105,7 +105,7 @@ function ListCard(props) {
                 <div id='list-card-title'>{idNamePair.name}</div>
                 <div style={{ marginLeft: "10px" }}>By: </div>
                 <div style={{ marginLeft: "10px", marginBottom: "7px" }}>
-                    published:
+                    Published:
                 </div>
             </div>
             <div id='unexpand-box2'>
@@ -113,11 +113,11 @@ function ListCard(props) {
                     <IconButton>
                         <ThumbUpIcon />
                     </IconButton>
-                    10
+                    0
                     <IconButton>
                         <ThumbDownIcon />
                     </IconButton>
-                    10
+                    0
                 </div>
                 <div
                     style={{
@@ -270,7 +270,7 @@ function ListCard(props) {
     //         </Box>
     //     </ListItem>
 
-    if (editActive && !isOpen) {
+    if (editActive) {
         cardElement =
             <TextField
                 margin="normal"

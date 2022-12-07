@@ -1,5 +1,4 @@
 import { useContext } from 'react'
-import { Statusbar } from ".";
 import HomeScreen from './HomeScreen'
 import SplashScreen from './SplashScreen'
 import AuthContext from '../auth'

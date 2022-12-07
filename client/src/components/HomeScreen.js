@@ -192,9 +192,9 @@ const HomeScreen = () => {
                         <TabPanel value={value} index={0}>
                             <YouTube videoId={song_id} opts={opts} onReady={onPlayerReady} onStateChange={onPlayerStateChange}/>
                             <div>Playlist: {store.currentList ? store.currentList.name : ""} </div>
-                            <div>song #: {(store.currentList && store.currentList.songs.length > 0) ? (songIndex+1) : ""}</div>
-                            <div>title: {(store.currentList && store.currentList.songs.length > 0) ? store.currentList.songs[songIndex].title : ""} </div>
-                            <div>artist: {(store.currentList && store.currentList.songs.length > 0) ? store.currentList.songs[songIndex].artist : ""}</div>
+                            <div>Song #: {(store.currentList && store.currentList.songs.length > 0) ? (songIndex+1) : ""}</div>
+                            <div>Title: {(store.currentList && store.currentList.songs.length > 0) ? store.currentList.songs[songIndex].title : ""} </div>
+                            <div>Artist: {(store.currentList && store.currentList.songs.length > 0) ? store.currentList.songs[songIndex].artist : ""}</div>
                             <div id="player-controller">
                                 <IconButton size="large" onClick={handlePrevious}>
                                     <PreviousIcon />
