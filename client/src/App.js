@@ -3,16 +3,12 @@ import { React } from 'react'
 import { BrowserRouter, Route, Switch } from 'react-router-dom'
 import { AuthContextProvider } from './auth';
 import { GlobalStoreContextProvider } from './store'
-import { Box } from '@mui/material'
 import {
-    AppBanner,
     HomeWrapper,
     LoginScreen,
     RegisterScreen,
-    Statusbar,
-    WorkspaceScreen
 } from './components'
-import MUIAlertModal from './components/MUIAlertModal'
+import MUIAlertModal from './components/MUIAlertModal';
 /*
     This is our application's top-level component.
     
@@ -29,16 +25,11 @@ const App = () => {
         <BrowserRouter>
             <AuthContextProvider>
                 <GlobalStoreContextProvider>              
-                    {/* <AppBanner /> */}
-                    <Box sx={{ flexGrow: 1, overflow: 'hidden' }}>
-                        <Switch>
-                            <Route path="/" exact component={HomeWrapper} />
-                            <Route path="/login/" exact component={LoginScreen} />
-                            <Route path="/register/" exact component={RegisterScreen} />
-                            <Route path="/playlist/:id" exact component={WorkspaceScreen} />
-                        </Switch>
-                    </Box>
-                    {/* <Statusbar /> */}
+                    <Switch>
+                        <Route path="/login/" component={LoginScreen} />
+                        <Route path="/register/" component={RegisterScreen} />
+                        <Route path="/" component={HomeWrapper} />
+                    </Switch>
                     <MUIAlertModal />
                 </GlobalStoreContextProvider>
             </AuthContextProvider>

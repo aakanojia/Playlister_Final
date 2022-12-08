@@ -31,7 +31,7 @@ function WorkspaceScreen() {
     if(store.currentList) {
         page = 
         <Box>
-        <AppBanner />
+        {/* <AppBanner /> */}
         <List 
             id="playlist-cards" 
             sx={{ left: '2.5%', height: '100%', width: '95%', bgcolor: '#eeeeedd'  }}
@@ -48,7 +48,7 @@ function WorkspaceScreen() {
             }
          </List>            
          { modalJSX }
-         <Statusbar />
+         {/* <Statusbar /> */}
          </Box>
     } else {
         page =<div></div>
